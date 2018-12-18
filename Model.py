@@ -58,7 +58,7 @@ regressor2 =LinearRegression()
 regressor3 = RandomForestRegressor(n_estimators = 300, random_state = 0)
 regressor4 = SVR(kernel = 'rbf')
 
-# Defining k for cross validation
+# Defining k fold cross validation function
 from sklearn.model_selection import cross_val_score
 def validation(model):
     accuracies = cross_val_score(estimator = model, X = X_train, y = y_train, cv = 10)
